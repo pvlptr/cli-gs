@@ -7,14 +7,24 @@ import {DocumentsListItemComponent} from "./documents-search/documents-list/docu
 import {DocumentsFacetComponent} from "./documents-search/documents-facets/documents-facet/documents-facet.component";
 import {DocumentsFacetsComponent} from "./documents-search/documents-facets/documents-facets.component";
 import {documentsRouting} from "./documents.routes";
+import {DocumentsService} from "./shared/documents.service";
+import { DocumentsSearchCriteriaComponent } from './documents-search/documents-search-criteria/documents-search-criteria.component';
 
 @NgModule({
   imports: [
     CommonModule,
     documentsRouting
   ],
-  declarations: [DocumentsSearchComponent, DocumentsListComponent, DocumentsListItemComponent, DocumentsFacetsComponent, DocumentsFacetComponent],
-  exports: [DocumentsSearchComponent]
+  declarations: [
+    DocumentsSearchComponent,
+    DocumentsSearchCriteriaComponent,
+    DocumentsListComponent,
+    DocumentsListItemComponent,
+    DocumentsFacetsComponent,
+    DocumentsFacetComponent,
+    DocumentsSearchCriteriaComponent],
+  exports: [DocumentsSearchComponent],
+  providers: [DocumentsService]
 })
 export class DocumentsModule {
 }

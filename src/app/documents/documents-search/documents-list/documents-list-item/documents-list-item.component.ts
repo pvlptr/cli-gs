@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {DocumentGS} from '../../../shared/document.model';
+import {Input} from "@angular/core/src/metadata/directives";
 
 @Component({
   selector: 'gs-documents-list-item',
@@ -7,7 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DocumentsListItemComponent implements OnInit {
 
-  constructor() { }
+  @Input()
+  document: DocumentGS;
+
+  constructor() {
+  }
 
   ngOnInit() {
   }
